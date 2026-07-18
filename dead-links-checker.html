@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dead Links Checker | WordPress Plugin | Kitawolf Studios</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Preserve your search engine rankings and UX. High-performance self-hosted WordPress plugin to crawl, monitor, and repair broken links and 404 image sources.">
+  <meta name="keywords" content="WordPress Dead Links Checker, Broken Link Finder, WP Link Fixer, SEO Link Audit, Fix 404 WordPress">
+  <meta name="author" content="Kitawolf Studios">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐺</text></svg>">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="index.css">
+  <style>
+    .product-hero {
+      padding-top: 160px;
+      padding-bottom: 80px;
+      text-align: center;
+    }
+    .product-hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+    .product-hero p {
+      max-width: 750px;
+      margin: 0 auto 32px;
+      font-size: clamp(1rem, 2vw, 1.15rem);
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .feature-box {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .feature-icon {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 800px;
+      margin: 40px auto 0;
+    }
+    .price-card {
+      padding: 40px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .price-card.popular {
+      border-color: var(--accent-primary);
+      box-shadow: var(--glow-shadow);
+    }
+    .popular-badge {
+      position: absolute;
+      top: -12px;
+      background: var(--gradient-accent);
+      color: var(--bg-dark);
+      padding: 4px 14px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .price-tag {
+      font-size: 2.5rem;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      margin: 16px 0;
+    }
+    .price-tag span {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+    }
+    .price-features {
+      list-style: none;
+      margin: 24px 0 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: left;
+      width: 100%;
+    }
+    .price-features li {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .price-features li::before {
+      content: '✓';
+      color: var(--accent-primary);
+      font-weight: bold;
+    }
+    .faq-container {
+      max-width: 800px;
+      margin: 40px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .faq-item {
+      padding: 24px;
+    }
+    .faq-item h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header id="site-header" class="scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="nav-logo">
+        <img src="kitawolf-logo.png" alt="Kitawolf Studios Logo" class="logo-img">
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html" id="link-home">Home</a></li>
+          <li class="dropdown active" id="dropdown-products">
+            <a href="#" class="dropdown-toggle" id="link-products" aria-haspopup="true" aria-expanded="false">Products <span class="chevron">▼</span></a>
+            <ul class="dropdown-menu open">
+              <li><a href="shortcode-cleaner.html" id="link-prod-cleaner">Shortcode Cleaner</a></li>
+              <li><a href="dead-links-checker.html" class="active" id="link-prod-links">Dead Links Checker</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#pillars" id="link-pillars">What We Do</a></li>
+          <li><a href="index.html#custom-software" id="link-custom">Custom Solutions</a></li>
+          <li><a href="index.html#contact" id="link-contact">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <a href="index.html#contact" class="nav-cta" id="nav-cta-btn">Start a Project</a>
+      
+      <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Product Hero -->
+    <section class="product-hero container">
+      <span class="hero-badge" style="border-color: rgba(var(--accent-pink-rgb), 0.2); background: rgba(var(--accent-pink-rgb), 0.1); color: var(--accent-pink);">WordPress Plugin</span>
+      <h1>Kitawolf <span class="gradient-text">Dead Links Checker</span></h1>
+      <p>Maintain your search engine authority and keep user experiences seamless. A high-performance, background crawler utility that scans, monitors, and edits broken links or missing media inside WordPress.</p>
+      <div style="display: flex; gap: 16px; justify-content: center;">
+        <a href="#pricing" class="btn btn-primary">Get License Key</a>
+        <a href="#features" class="btn btn-secondary">Explore Features</a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section-padding" id="features" style="background: rgba(255,255,255,0.005); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag">Features List</span>
+          <h2>Automated SEO Protection</h2>
+          <p style="margin-top: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">Keep search engine indexing spiders happy. Stop user frustration caused by clicking dead links.</p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <div class="feature-box glass-panel">
+            <div class="feature-icon">🚀</div>
+            <h3>High-Performance Crawler</h3>
+            <p>Runs asynchronous background worker routines using standard WordPress Cron, checking hundreds of internal and external links without impacting site load speeds.</p>
+          </div>
+          <!-- Feature 2 -->
+          <div class="feature-box glass-panel">
+            <div class="feature-icon">✏️</div>
+            <h3>Inline Link Editor</h3>
+            <p>Update or remove broken link URLs directly from the results dashboard without opening individual post editors or page builder screens.</p>
+          </div>
+          <!-- Feature 3 -->
+          <div class="feature-box glass-panel">
+            <div class="feature-icon">🖼️</div>
+            <h3>Asset Verification</h3>
+            <p>Verifies not just text anchor tags (<code>&lt;a&gt;</code>), but image sources, embedded iframe objects, and stylesheet attachments to detect broken 404 assets.</p>
+          </div>
+          <!-- Feature 4 -->
+          <div class="feature-box glass-panel">
+            <div class="feature-icon">📅</div>
+            <h3>Automated Scheduling</h3>
+            <p>Configure automated weekly, bi-weekly, or monthly crawler jobs so your link profile remains clean and healthy without manual audits.</p>
+          </div>
+          <!-- Feature 5 -->
+          <div class="feature-box glass-panel">
+            <div class="feature-icon">📈</div>
+            <h3>SEO Impact Alerts</h3>
+            <p>Flags critical search engine performance inhibitors like redirect chains, 301 loops, soft 404 statuses, and search bot blocking rules (noindex).</p>
+          </div>
+          <!-- Feature 6 -->
+          <div class="feature-box glass-panel">
+            <div class="feature-icon">✉️</div>
+            <h3>Email Notification Digests</h3>
+            <p>Receive comprehensive summaries and warnings directly in your inbox after each automated crawling process completes.</p>
+          </div>
+          <!-- Feature 7 -->
+          <div class="feature-box glass-panel" style="grid-column: 1 / -1; text-align: center; align-items: center; max-width: 600px; margin: 0 auto;">
+            <div class="feature-icon">🔒</div>
+            <h3>Privacy & Autonomy</h3>
+            <p>100% self-hosted engine. All checks run directly from your server without routing your internal database links or user paths through external servers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section-padding" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag">Plans & Licensing</span>
+          <h2>Protect Your Site's Link Health</h2>
+          <p style="margin-top: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">Secure payments handled by Lemon Squeezy. All plans include 1 year of software updates and dedicated customer support.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Plan 1 -->
+          <div class="price-card glass-panel">
+            <h3>Single Site License</h3>
+            <div class="price-tag">$24 <span>/ year</span></div>
+            <p>Perfect for corporate sites, freelancers, or single blog installations.</p>
+            <ul class="price-features">
+              <li>1 Active WordPress Site</li>
+              <li>1 Year of Automatic Updates</li>
+              <li>1 Year of Dedicated Email Support</li>
+              <li>Inline Link Editing & Automation</li>
+            </ul>
+            <a href="#" class="btn btn-secondary" style="width: 100%;" id="buy-single-site">Buy License Key</a>
+          </div>
+
+          <!-- Plan 2 -->
+          <div class="price-card glass-panel popular">
+            <span class="popular-badge">Best Value</span>
+            <h3>Unlimited Sites License</h3>
+            <div class="price-tag">$59 <span>/ year</span></div>
+            <p>Essential for developers, web designers, and agency networks managing client sites.</p>
+            <ul class="price-features">
+              <li>Unlimited Active WordPress Sites</li>
+              <li>1 Year of Automatic Updates</li>
+              <li>1 Year of Priority Email Support</li>
+              <li>Inline Link Editing & Automation</li>
+              <li>Agency License Transfer Rights</li>
+            </ul>
+            <a href="#" class="btn btn-primary" style="width: 100%;" id="buy-unlimited-site">Buy License Key</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding" id="faq" style="border-top: 1px solid var(--border-color); background: rgba(255,255,255,0.003);">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag">Help Center</span>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item glass-panel">
+            <h3>Will crawling slow down my website performance?</h3>
+            <p>No. The crawler engine utilizes throttling parameters and chunk-based scheduling. It makes internal post loops and HTTP requests asynchronously using local cron execution, checking links in small sets to avoid page latency for regular users or exceeding hosting resource limits.</p>
+          </div>
+          <div class="faq-item glass-panel">
+            <h3>Can I edit links directly in Gutenberg/Page Builders?</h3>
+            <p>Yes. The Inline Link Editor updates links directly inside your database records. It is fully compatible with the WordPress Block Editor (Gutenberg) as well as classic page builders (Divi, Elementor, WPBakery) because it targets the saved text contents safely.</p>
+          </div>
+          <div class="faq-item glass-panel">
+            <h3>Is there a limit on how many links it checks?</h3>
+            <p>There is no arbitrary limit built into the plugin. The checker can audit thousands of links across massive databases, limited only by your hosting server's capacity to process cron routines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="index.html" class="logo">
+            <img src="kitawolf-logo.png" alt="Kitawolf Studios Logo" class="logo-img" style="height: 48px;">
+          </a>
+          <p>Engineering premium plugins, beautiful applications, and memorable games tailored to your exact specifications.</p>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#pillars">What We Do</a></li>
+            <li><a href="index.html#custom-software">Custom Solutions</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>Support & Inquiries</h4>
+          <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 8px;">Have questions? Get in touch:</p>
+          <a href="index.html#contact" class="gradient-text" style="font-weight: 600; font-size: 0.95rem;">Contact Support Form</a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Kitawolf Studios. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="privacy.html" id="link-footer-privacy">Privacy Policy</a>
+          <a href="terms.html" id="link-footer-terms">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="index.js"></script>
+</body>
+</html>

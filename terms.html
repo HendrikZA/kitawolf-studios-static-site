@@ -17,21 +17,36 @@
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header & Navigation -->
   <header id="site-header" class="scrolled">
     <div class="container nav-container">
       <a href="index.html" class="logo" id="nav-logo">
-        <div class="logo-icon">K</div>
-        <span>Kitawolf<span class="gradient-text" style="font-weight: 800;">Studios</span></span>
+        <img src="kitawolf-logo.png" alt="Kitawolf Studios Logo" class="logo-img">
       </a>
       
       <nav aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="index.html">Back to Home</a></li>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html" id="link-home">Home</a></li>
+          <li class="dropdown" id="dropdown-products">
+            <a href="#" class="dropdown-toggle" id="link-products" aria-haspopup="true" aria-expanded="false">Products <span class="chevron">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="shortcode-cleaner.html" id="link-prod-cleaner">Shortcode Cleaner</a></li>
+              <li><a href="dead-links-checker.html" id="link-prod-links">Dead Links Checker</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#pillars" id="link-pillars">What We Do</a></li>
+          <li><a href="index.html#custom-software" id="link-custom">Custom Solutions</a></li>
+          <li><a href="index.html#contact" id="link-contact">Contact</a></li>
         </ul>
       </nav>
       
       <a href="index.html#contact" class="nav-cta" id="nav-cta-btn">Start a Project</a>
+      
+      <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
@@ -105,5 +120,7 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
+  <script src="index.js"></script>
 </body>
 </html>

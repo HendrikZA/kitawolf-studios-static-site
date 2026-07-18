@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll);
   handleScroll(); // Initial check in case page is loaded scrolled down
 
-  // --- Mobile Menu Toggle ---
+  // --- Mobile Menu Toggle & Dropdown ---
   const mobileToggle = document.getElementById('mobile-menu-toggle');
   const navMenu = document.getElementById('nav-menu');
   
@@ -24,13 +24,34 @@ document.addEventListener('DOMContentLoaded', () => {
       navMenu.classList.toggle('active');
     });
 
-    // Close menu when clicking a link
-    navMenu.querySelectorAll('a').forEach(link => {
+    // Close menu when clicking a standard link (exclude dropdown toggle)
+    navMenu.querySelectorAll('a:not(.dropdown-toggle)').forEach(link => {
       link.addEventListener('click', () => {
         mobileToggle.setAttribute('aria-expanded', 'false');
         navMenu.classList.remove('active');
+        
+        // Reset dropdown states when menu closes
+        navMenu.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+        navMenu.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('open'));
       });
     });
+
+    // Mobile dropdown toggle logic
+    const dropdownToggle = navMenu.querySelector('.dropdown-toggle');
+    const dropdownWrapper = navMenu.querySelector('.dropdown');
+    const dropdownMenu = navMenu.querySelector('.dropdown-menu');
+
+    if (dropdownToggle && dropdownWrapper && dropdownMenu) {
+      dropdownToggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const isOpen = dropdownMenu.classList.contains('open');
+          dropdownToggle.setAttribute('aria-expanded', !isOpen);
+          dropdownWrapper.classList.toggle('active');
+          dropdownMenu.classList.toggle('open');
+        }
+      });
+    }
   }
 
   // --- Active Nav Highlighting on Scroll ---

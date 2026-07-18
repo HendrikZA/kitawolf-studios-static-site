@@ -26,21 +26,27 @@
   <!-- Header & Navigation -->
   <header id="site-header">
     <div class="container nav-container">
-      <a href="#" class="logo" id="nav-logo">
-        <div class="logo-icon">K</div>
-        <span>Kitawolf<span class="gradient-text" style="font-weight: 800;">Studios</span></span>
+      <a href="index.html" class="logo" id="nav-logo">
+        <img src="kitawolf-logo.png" alt="Kitawolf Studios Logo" class="logo-img">
       </a>
       
       <nav aria-label="Main Navigation">
         <ul class="nav-links" id="nav-menu">
-          <li><a href="#" class="active" id="link-home">Home</a></li>
-          <li><a href="#pillars" id="link-pillars">What We Do</a></li>
-          <li><a href="#custom-software" id="link-custom">Custom Solutions</a></li>
-          <li><a href="#contact" id="link-contact">Contact</a></li>
+          <li><a href="index.html" class="active" id="link-home">Home</a></li>
+          <li class="dropdown" id="dropdown-products">
+            <a href="#" class="dropdown-toggle" id="link-products" aria-haspopup="true" aria-expanded="false">Products <span class="chevron">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="shortcode-cleaner.html" id="link-prod-cleaner">Shortcode Cleaner</a></li>
+              <li><a href="dead-links-checker.html" id="link-prod-links">Dead Links Checker</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#pillars" id="link-pillars">What We Do</a></li>
+          <li><a href="index.html#custom-software" id="link-custom">Custom Solutions</a></li>
+          <li><a href="index.html#contact" id="link-contact">Contact</a></li>
         </ul>
       </nav>
       
-      <a href="#contact" class="nav-cta" id="nav-cta-btn">Start a Project</a>
+      <a href="index.html#contact" class="nav-cta" id="nav-cta-btn">Start a Project</a>
       
       <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-menu">
         <span></span>
@@ -111,6 +117,53 @@
               <li>Smooth Multiplatform Play</li>
               <li>Gamified Brand Solutions</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="section-padding" id="products" style="border-top: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag">Our Plugins</span>
+          <h2>Featured WordPress Products</h2>
+          <p style="margin-top: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">Production-ready utilities designed to optimize, secure, and clean up your WordPress installations.</p>
+        </div>
+
+        <div class="pillars-grid">
+          <!-- Product 1 Card -->
+          <div class="pillar-card glass-panel" id="prod-card-cleaner">
+            <div class="pillar-icon-wrapper" style="background: rgba(var(--accent-primary-rgb), 0.1); color: var(--accent-primary); border: 1px solid rgba(var(--accent-primary-rgb), 0.2);">🧹</div>
+            <h3>Shortcode Cleaner</h3>
+            <p>A high-performance utility designed to safely detect, suppress, and purge broken tags left behind by deactivated page builders.</p>
+            <ul style="margin-bottom: 20px;">
+              <li>AJAX Batch DB Scanner</li>
+              <li>Revision-Safe Safe Clean</li>
+              <li>Frontend Tag Suppression</li>
+              <li>Dual Purge (Keep/Strip Text)</li>
+            </ul>
+            <div style="margin-top: auto; display: flex; gap: 12px; align-items: center;">
+              <a href="shortcode-cleaner.html" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.9rem;">Learn More</a>
+              <a href="shortcode-cleaner.html#pricing" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;">Get License</a>
+            </div>
+          </div>
+
+          <!-- Product 2 Card -->
+          <div class="pillar-card glass-panel" id="prod-card-links">
+            <div class="pillar-icon-wrapper" style="background: rgba(var(--accent-pink-rgb), 0.1); color: var(--accent-pink); border: 1px solid rgba(var(--accent-pink-rgb), 0.2);">🔗</div>
+            <h3>Dead Links Checker</h3>
+            <p>Maintain SEO rankings and improve user experience by automatically crawling, detecting, and fixing broken links across your site.</p>
+            <ul style="margin-bottom: 20px;">
+              <li>Self-Hosted Crawler Engine</li>
+              <li>Verify Internal & External Links</li>
+              <li>Inline Link Editor Tool</li>
+              <li>Automated Weekly Scheduling</li>
+            </ul>
+            <div style="margin-top: auto; display: flex; gap: 12px; align-items: center;">
+              <a href="dead-links-checker.html" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.9rem;">Learn More</a>
+              <a href="dead-links-checker.html#pricing" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;">Get License</a>
+            </div>
           </div>
         </div>
       </div>
@@ -219,9 +272,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-about">
-          <a href="#" class="logo">
-            <div class="logo-icon">K</div>
-            <span>Kitawolf<span class="gradient-text" style="font-weight: 800;">Studios</span></span>
+          <a href="index.html" class="logo">
+            <img src="kitawolf-logo.png" alt="Kitawolf Studios Logo" class="logo-img" style="height: 48px;">
           </a>
           <p>Engineering premium plugins, beautiful applications, and memorable games tailored to your exact specifications.</p>
         </div>
@@ -229,10 +281,10 @@
         <div class="footer-links-col">
           <h4>Navigation</h4>
           <ul class="footer-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#pillars">What We Do</a></li>
-            <li><a href="#custom-software">Custom Solutions</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#pillars">What We Do</a></li>
+            <li><a href="index.html#custom-software">Custom Solutions</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
           </ul>
         </div>
         
