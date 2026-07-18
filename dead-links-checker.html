@@ -51,7 +51,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
-      max-width: 800px;
+      max-width: 1100px;
       margin: 40px auto 0;
     }
     .price-card {
@@ -240,34 +240,50 @@
         </div>
 
         <div class="pricing-grid">
-          <!-- Plan 1 -->
+          <!-- Plan 1: Personal -->
           <div class="price-card glass-panel">
-            <h3>Single Site License</h3>
-            <div class="price-tag">$24 <span>/ year</span></div>
-            <p>Perfect for corporate sites, freelancers, or single blog installations.</p>
+            <h3>Personal License</h3>
+            <div class="price-tag">£49 <span>/ year</span></div>
+            <p>Perfect for personal blogs, freelancers, or single site owners.</p>
             <ul class="price-features">
               <li>1 Active WordPress Site</li>
+              <li>2,500 Monthly Scan Limit</li>
               <li>1 Year of Automatic Updates</li>
-              <li>1 Year of Dedicated Email Support</li>
+              <li>1 Year of Standard Support</li>
               <li>Inline Link Editing & Automation</li>
             </ul>
-            <a href="#" class="btn btn-secondary" style="width: 100%;" id="buy-single-site">Buy License Key</a>
+            <a href="#" class="btn btn-secondary" style="width: 100%;" id="buy-personal">Buy License Key</a>
           </div>
 
-          <!-- Plan 2 -->
+          <!-- Plan 2: Professional -->
           <div class="price-card glass-panel popular">
-            <span class="popular-badge">Best Value</span>
-            <h3>Unlimited Sites License</h3>
-            <div class="price-tag">$59 <span>/ year</span></div>
-            <p>Essential for developers, web designers, and agency networks managing client sites.</p>
+            <span class="popular-badge">Popular Choice</span>
+            <h3>Professional License</h3>
+            <div class="price-tag">£119 <span>/ year</span></div>
+            <p>Ideal for growing businesses, e-commerce stores, and active sites.</p>
             <ul class="price-features">
-              <li>Unlimited Active WordPress Sites</li>
+              <li>Up to 10 Active WordPress Sites</li>
+              <li>50,000 Links Pooled Limit</li>
               <li>1 Year of Automatic Updates</li>
-              <li>1 Year of Priority Email Support</li>
+              <li>1 Year of Priority Support</li>
               <li>Inline Link Editing & Automation</li>
+            </ul>
+            <a href="#" class="btn btn-primary" style="width: 100%;" id="buy-professional">Buy License Key</a>
+          </div>
+
+          <!-- Plan 3: Agency -->
+          <div class="price-card glass-panel">
+            <h3>Agency License</h3>
+            <div class="price-tag">£249 <span>/ year</span></div>
+            <p>Designed for agencies, developers, and SEO experts managing client networks.</p>
+            <ul class="price-features">
+              <li>Up to 100 Active WordPress Sites</li>
+              <li>500,000 Links Pooled Limit</li>
+              <li>1 Year of Automatic Updates</li>
+              <li>1 Year of Priority Support</li>
               <li>Agency License Transfer Rights</li>
             </ul>
-            <a href="#" class="btn btn-primary" style="width: 100%;" id="buy-unlimited-site">Buy License Key</a>
+            <a href="#" class="btn btn-secondary" style="width: 100%;" id="buy-agency">Buy License Key</a>
           </div>
         </div>
       </div>
@@ -292,7 +308,7 @@
           </div>
           <div class="faq-item glass-panel">
             <h3>Is there a limit on how many links it checks?</h3>
-            <p>There is no arbitrary limit built into the plugin. The checker can audit thousands of links across massive databases, limited only by your hosting server's capacity to process cron routines.</p>
+            <p>To ensure high performance and prevent hosting CPU limits from being exceeded, scans are scaled by plan (2,500 links/month on Personal, 50,000 links/month on Professional, and 500,000 links/month on Agency). This keeps your crawling lightweight and safe for standard server hosts.</p>
           </div>
         </div>
       </div>
